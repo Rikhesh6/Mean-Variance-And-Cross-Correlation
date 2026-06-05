@@ -31,61 +31,66 @@ Type your code in New Editor:
 
 ## Code:
 ```
-function X=f(x)
-    z=5 * (1-x)^2;
-    X=x*z;
+clear; 
+clc; 
+clear;
+function X=f(x),
+    z= 4*(1+x)^2,
+    X=x*z
 endfunction
-a=2;
-b=3;
+a=0;
+b=1;
 EX=intg(a,b,f);
-function Y=c(y)
-    z=5 * (1-y)^2;
-    Y=y*z;
+function Y=c(y),
+    z=4*(1+y)^2,
+    Y=y*z
 endfunction
 EY=intg(a,b,c);
-disp(EX,"i)Mean of X=")
-disp(EY,"Mean of Y=")
+disp("i) Mean of X=",EX)
+disp("  Mean of Y=",EY)
 
-function X=g(x)
-    z=3 * (1-x)^2;
-    X=x **2 *z;
-endfunction
-a=2;
-b=3;
-EX2=intg(a,b,g);
+function X=g(x),
+    z=4*(1+x)^2,
+    X=x^2*z
+endfunction 
+a=0;
+b=1;
+EX2=intg(a,b,g); 
 function Y=h(y)
-    z=3 * (1-y)^2;
-    Y=y **2 *z;
-endfunction
+    z=4*(1+y)^2,
+    Y=y^2*z
+endfunction 
 EY2=intg(a,b,h);
-vX2=EX2-(EX) **2;
-vY2=EY2-(EY) **2;
-disp(vX2,"ii)Variance of X");
-disp(vY2,"Variance of Y");
+vX2=EX2-(EX)^2;
+vY2=EY2-(EY)^2;
+disp(vX2,"ii) Variance of X"); 
+disp(vY2,"   Variance of Y");
 
-x=input("type in the reference sequence=");
-y=input("type in the reference sequence=");
+x= input("type in the reference sequence="); 
+y= input("type in the second sequence="); 
 n1=max(size(y))-1;
 n2=max(size(x))-1;
 r=corr(x,y,n1);
 plot2d3('gnn',r);
+
+
 ```
 ## Output:
 
-![WhatsApp Image 2025-11-20 at 17 57 00_ea6ae754](https://github.com/user-attachments/assets/8fc10509-f5ce-4244-b44c-322acf05067b)
+<img width="1918" height="1110" alt="image" src="https://github.com/user-attachments/assets/505ddfb1-b28b-48a5-8f66-4ef9b26696ec" />
+
 
 ## Calculation:
-
-![WhatsApp Image 2025-11-22 at 20 12 21_1f98bbe1](https://github.com/user-attachments/assets/e6e8572b-d958-42f4-a155-9563daf73889)
-![WhatsApp Image 2025-11-22 at 20 12 51_6c15b144](https://github.com/user-attachments/assets/19ce8011-7b28-48d7-ae2b-6dcda88054f5)
-![WhatsApp Image 2025-11-22 at 20 13 11_2e15dc6a](https://github.com/user-attachments/assets/c4d0e3a8-c2d6-41fe-a389-c9ddcb75de10)
+<img width="887" height="756" alt="image" src="https://github.com/user-attachments/assets/70fdbf8e-8c69-48d2-a06d-80b0908b91f1" />
+<img width="679" height="1111" alt="image" src="https://github.com/user-attachments/assets/2c05f101-f8e3-49fc-a458-ba5fff920fab" />
 
 
 
 
-i) Mean of X = 112.95 ;Mean of Y = 112.97
 
-ii) Variance of X =-12,271.7; Variance of Y =-12,291.6
+i) Mean of X = 5.6666667 ;Mean of Y = 5.6666667
+
+ii) Variance of X = -27.977778; Variance of Y = -27.977778
 
 Cross Correlation: Type in the reference sequence = [1 2 3 4 5 6 7 8]
 
